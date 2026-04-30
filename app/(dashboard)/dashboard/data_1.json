@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "serial_number": "001",
+    "language": "MALAYALAM",
+    "title": "IMAM SHAFI KAVITHAKAL",
+    "author": "IMAM SHAFI",
+    "publisher": "CAPITAL INTERNATIONAL BOOKS",
+    "Price": "350",
+    "status": "Active"
+  },
+  {
+    "id": 2,
+    "serial_number": "002",
+    "language": "MALAYALAM",
+    "title": "4 KHALIFAMAAR ISLAMIC QUIZ",
+    "author": "-",
+    "publisher": "BOOK PLUS",
+    "Price": "100",
+    "status": "Active"
+  },
+  {
+    "id": 3,
+    "serial_number": "003",
+    "language": "MALAYALAM",
+    "title": "MARANA PARYANDHAM",
+    "author": "SHAMSUDHEEN MUBARAK",
+    "publisher": "DC BOOKS",
+    "Price": "230",
+    "status": "Active"
+  },
+  {
+    "id": 4,
+    "serial_number": "004",
+    "language": "MALAYALAM",
+    "title": "MUHAMMED",
+    "author": "HAFIZ SAEED ALI WAFI",
+    "publisher": "WAY BOOKS",
+    "Price": "220",
+    "status": "Active"
+  },
+  {
+    "id": 5,
+    "serial_number": "005",
+    "language": "MALAYALAM",
+    "title": "MARANATHINTE THAYVARAKAL",
+    "author": "ET HUSAIN HUDAWI",
+    "publisher": "BOOK PLUS",
+    "Price": "50",
+    "status": "Inactive"
+  }
+]

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 262.89 310.57">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-2 {
+        fill: #a4e7f9;
+      }
+
+      .cls-3 {
+        fill: #eaed2a;
+      }
+
+      .cls-4 {
+        fill: #7ffcaa;
+      }
+
+      .cls-5 {
+        fill: #ffd7e4;
+      }
+
+      .cls-6 {
+        fill: #92deff;
+      }
+
+      .cls-7 {
+        fill: none;
+      }
+
+      .cls-8 {
+        fill: #be9fff;
+      }
+
+      .cls-9 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-10 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-11 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="478.2" y1="-107.34" x2="478.2" y2="-167.34" gradientTransform="translate(-64.56 80.32) scale(.64 -.64)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2555ff"/>
+      <stop offset="1" stop-color="#2555ff" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="220.2" y1="-299.34" x2="220.2" y2="-357.34" gradientTransform="translate(-64.56 80.32) scale(.64 -.64)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#46bdf0"/>
+      <stop offset="1" stop-color="#46b3f0" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="135.2" y1="-1.34" x2="135.2" y2="-71.34" gradientTransform="translate(-64.56 80.32) scale(.64 -.64)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#46f080"/>
+      <stop offset="1" stop-color="#46f08a" stop-opacity=".15"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="413.2" y1="124.66" x2="413.2" y2="54.66" gradientTransform="translate(-64.56 80.32) scale(.64 -.64)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#edf046"/>
+      <stop offset="1" stop-color="#f0e946" stop-opacity=".15"/>
+    </linearGradient>
+  </defs>
+  <circle class="cls-10" cx="243.56" cy="168.81" r="19.33"/>
+  <circle class="cls-1" cx="77.32" cy="291.88" r="18.69"/>
+  <circle class="cls-9" cx="22.55" cy="103.74" r="22.55"/>
+  <circle class="cls-11" cx="201.68" cy="22.55" r="22.55"/>
+  <rect class="cls-7" x="94.07" y="94.72" width="102.45" height="118.56"/>
+  <rect class="cls-7" x="60.57" y="179.77" width="23.2" height="33.51"/>
+  <rect class="cls-7" x="76.68" y="44.46" width="25.77" height="32.22"/>
+  <rect class="cls-7" x="167.53" y="144.97" width="39.95" height="27.06"/>
+  <rect class="cls-7" x="63.79" y="115.98" width="16.75" height="16.75"/>
+  <rect class="cls-7" x="52.84" y="199.74" width="11.6" height="14.18"/>
+  <rect class="cls-7" x="190.68" y="88.13" width="17.14" height="20.2" transform="translate(59.14 270.62) rotate(-77.14)"/>
+  <circle class="cls-3" cx="173.32" cy="249.36" r="2.58"/>
+  <circle class="cls-5" cx="101.16" cy="254.51" r="2.58"/>
+  <circle class="cls-6" cx="174.61" cy="49.61" r="2.58"/>
+  <circle class="cls-8" cx="141.11" cy="60.57" r="1.29"/>
+  <circle class="cls-4" cx="192.01" cy="234.54" r="1.29"/>
+  <circle class="cls-2" cx="124.36" cy="262.24" r="1.29"/>
+</svg>
