@@ -1,5 +1,5 @@
 {
-  "name": "daily-tracker",
+  "name": "library-data",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/canvas-confetti": "^1.9.0",
     "@types/node": "^20",
     "@types/papaparse": "^5.5.2",
     "@types/pg": "^8.16.0",

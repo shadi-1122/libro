@@ -1,10 +1,20 @@
 import { AppSidebar } from "@/components/app-sidebar";
-import { DataTable } from "@/components/data-table";
-import { SectionCards } from "@/components/section-cards";
+import { redirect } from "next/navigation";
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { getUser } from "@/data/user/get-user";
 
-export default function Page({ children }: { children: React.ReactNode }) {
+export default async function Page({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const user = await getUser();
+
+  if (!user) {
+    redirect("/login");
+  }
+
   return (
     <SidebarProvider
       style={

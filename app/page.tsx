@@ -1,5 +1,14 @@
-import { ComponentExample } from "@/components/component-example";
+import { redirect } from "next/navigation";
+import { getUser } from "@/data/user/get-user";
 
-export default function Page() {
-return <ComponentExample />;
+export default async function Page() {
+  const user = await getUser();
+
+  if (user) {
+    redirect("/dashboard");
+  } else {
+    redirect("/login");
+  }
+
+  return null;
 }

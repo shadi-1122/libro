@@ -204,7 +204,7 @@ export default function PrintForm({
 
   return (
     <div className="flex h-full flex-col items-center justify-center gap-4">
-      <Card className="w-[400px]">
+      <Card className="w-100">
         <CardHeader>
           <CardTitle>Print Labels</CardTitle>
           <CardDescription>

@@ -1,6 +1,7 @@
-import { GalleryVerticalEnd } from "lucide-react"
+import { GalleryVerticalEnd, Loader } from "lucide-react";
+import { Suspense } from "react";
 
-import { ResetPasswordForm } from "@/components/reset-password-form"
+import { ResetPasswordForm } from "@/components/reset-password-form";
 
 export default function ForgotpasswordPaage() {
   return (
@@ -12,8 +13,10 @@ export default function ForgotpasswordPaage() {
           </div>
           Acme Inc.
         </a>
-        <ResetPasswordForm />
+        <Suspense fallback={<Loader className="animate-spin" />}>
+          <ResetPasswordForm />
+        </Suspense>
       </div>
     </div>
-  )
+  );
 }
