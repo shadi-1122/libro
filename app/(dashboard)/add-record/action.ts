@@ -170,6 +170,48 @@ export async function DeleteRecord(bookId: string): Promise<ApiResponse> {
   }
 }
 
+export async function DeleteAllRecords(): Promise<ApiResponse> {
+  const session = await requireUser();
+
+  try {
+    const req = await request();
+    const decision = await aj.protect(req, {
+      fingerprint: session.user.id,
+    });
+
+    if (decision.isDenied()) {
+      if (decision.reason.isRateLimit()) {
+        return {
+          status: "error",
+          message: "You have been rate limited. Please try again later.",
+        };
+      } else {
+        return {
+          status: "error",
+          message:
+            "You are a bot! if this is a mistake, please contact support.",
+        };
+      }
+    }
+
+    await prisma.book.deleteMany({
+      where: {
+        userId: session?.user.id as string,
+      },
+    });
+
+    return {
+      status: "success",
+      message: "All records deleted successfully!",
+    };
+  } catch {
+    return {
+      status: "error",
+      message: "Failed to delete book records! Please try again later.",
+    };
+  }
+}
+
 export async function BulkCreateRecords(rows: any[]): Promise<ApiResponse> {
   const session = await requireUser();
 

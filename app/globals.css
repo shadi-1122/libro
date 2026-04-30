@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -19,7 +20,7 @@
   --muted-foreground: oklch(0.5416 0.0512 37.2132);
   --accent: oklch(0.8502 0.0389 49.0874);
   --accent-foreground: oklch(0.4063 0.0255 40.3627);
-  --destructive: oklch(0.2225 0.0098 52.9636);
+  --destructive: oklch(0.6368 0.2078 25.3313);
   --destructive-foreground: oklch(1.0000 0 0);
   --border: oklch(0.7473 0.0387 80.5476);
   --input: oklch(0.7473 0.0387 80.5476);
@@ -46,15 +47,15 @@
   --shadow-blur: 0px;
   --shadow-spread: 0px;
   --shadow-opacity: 0.11;
-  --shadow-color: hsl(20 18% 51% / 0.4);
-  --shadow-2xs: 2px 2px 0px 0px hsl(20 18% 51% / 0.06);
-  --shadow-xs: 2px 2px 0px 0px hsl(20 18% 51% / 0.06);
-  --shadow-sm: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 1px 2px -1px hsl(20 18% 51% / 0.11);
-  --shadow: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 1px 2px -1px hsl(20 18% 51% / 0.11);
-  --shadow-md: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 2px 4px -1px hsl(20 18% 51% / 0.11);
-  --shadow-lg: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 4px 6px -1px hsl(20 18% 51% / 0.11);
-  --shadow-xl: 2px 2px 0px 0px hsl(20 18% 51% / 0.11), 2px 8px 10px -1px hsl(20 18% 51% / 0.11);
-  --shadow-2xl: 2px 2px 0px 0px hsl(20 18% 51% / 0.28);
+  --shadow-color: #997b6c;
+  --shadow-2xs: 2px 2px 0px 0px hsl(20.0000 18.0723% 51.1765% / 0.06);
+  --shadow-xs: 2px 2px 0px 0px hsl(20.0000 18.0723% 51.1765% / 0.06);
+  --shadow-sm: 2px 2px 0px 0px hsl(20.0000 18.0723% 51.1765% / 0.11), 2px 1px 2px -1px hsl(20.0000 18.0723% 51.1765% / 0.11);
+  --shadow: 2px 2px 0px 0px hsl(20.0000 18.0723% 51.1765% / 0.11), 2px 1px 2px -1px hsl(20.0000 18.0723% 51.1765% / 0.11);
+  --shadow-md: 2px 2px 0px 0px hsl(20.0000 18.0723% 51.1765% / 0.11), 2px 2px 4px -1px hsl(20.0000 18.0723% 51.1765% / 0.11);
+  --shadow-lg: 2px 2px 0px 0px hsl(20.0000 18.0723% 51.1765% / 0.11), 2px 4px 6px -1px hsl(20.0000 18.0723% 51.1765% / 0.11);
+  --shadow-xl: 2px 2px 0px 0px hsl(20.0000 18.0723% 51.1765% / 0.11), 2px 8px 10px -1px hsl(20.0000 18.0723% 51.1765% / 0.11);
+  --shadow-2xl: 2px 2px 0px 0px hsl(20.0000 18.0723% 51.1765% / 0.28);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
 }
@@ -101,15 +102,15 @@
   --shadow-blur: 0px;
   --shadow-spread: 0px;
   --shadow-opacity: 0.11;
-  --shadow-color: hsl(20 18% 30% / 0.5);
-  --shadow-2xs: 2px 2px 0px 0px hsl(20 18% 30% / 0.06);
-  --shadow-xs: 2px 2px 0px 0px hsl(20 18% 30% / 0.06);
-  --shadow-sm: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 1px 2px -1px hsl(20 18% 30% / 0.11);
-  --shadow: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 1px 2px -1px hsl(20 18% 30% / 0.11);
-  --shadow-md: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 2px 4px -1px hsl(20 18% 30% / 0.11);
-  --shadow-lg: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 4px 6px -1px hsl(20 18% 30% / 0.11);
-  --shadow-xl: 2px 2px 0px 0px hsl(20 18% 30% / 0.11), 2px 8px 10px -1px hsl(20 18% 30% / 0.11);
-  --shadow-2xl: 2px 2px 0px 0px hsl(20 18% 30% / 0.28);
+  --shadow-color: #5a483f;
+  --shadow-2xs: 2px 2px 0px 0px hsl(20.0000 17.6471% 30.0000% / 0.06);
+  --shadow-xs: 2px 2px 0px 0px hsl(20.0000 17.6471% 30.0000% / 0.06);
+  --shadow-sm: 2px 2px 0px 0px hsl(20.0000 17.6471% 30.0000% / 0.11), 2px 1px 2px -1px hsl(20.0000 17.6471% 30.0000% / 0.11);
+  --shadow: 2px 2px 0px 0px hsl(20.0000 17.6471% 30.0000% / 0.11), 2px 1px 2px -1px hsl(20.0000 17.6471% 30.0000% / 0.11);
+  --shadow-md: 2px 2px 0px 0px hsl(20.0000 17.6471% 30.0000% / 0.11), 2px 2px 4px -1px hsl(20.0000 17.6471% 30.0000% / 0.11);
+  --shadow-lg: 2px 2px 0px 0px hsl(20.0000 17.6471% 30.0000% / 0.11), 2px 4px 6px -1px hsl(20.0000 17.6471% 30.0000% / 0.11);
+  --shadow-xl: 2px 2px 0px 0px hsl(20.0000 17.6471% 30.0000% / 0.11), 2px 8px 10px -1px hsl(20.0000 17.6471% 30.0000% / 0.11);
+  --shadow-2xl: 2px 2px 0px 0px hsl(20.0000 17.6471% 30.0000% / 0.28);
 }
 
 @theme inline {

@@ -97,13 +97,18 @@ import {
   Filter,
   ArrowDownAZ,
   ArrowUpAZ,
+  Loader,
 } from "lucide-react";
 import { useTransition } from "react";
 import { bookSchema, BookSchemaType } from "@/lib/zodSchemas";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { tryCatch } from "@/hooks/try-catch";
-import { DeleteRecord, EditRecord } from "@/app/(dashboard)/add-record/action";
+import {
+  DeleteAllRecords,
+  DeleteRecord,
+  EditRecord,
+} from "@/app/(dashboard)/add-record/action";
 import { toast } from "sonner";
 import {
   Form,
@@ -113,6 +118,18 @@ import {
   FormLabel,
   FormMessage,
 } from "./ui/form";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogMedia,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "./ui/alert-dialog";
 
 export const schema = z.object({
   id: z.string(),
@@ -333,7 +350,27 @@ export function DataTable({
 }) {
   const [activeTab, setActiveTab] = React.useState("all");
   const [search, setSearch] = React.useState("");
+  const [isDeletingAll, startDeleteAll] = useTransition();
   const [data, setData] = React.useState(() => initialData);
+
+  const handleDeleteAll = () => {
+    startDeleteAll(async () => {
+      const { data: result, error } = await tryCatch(DeleteAllRecords());
+
+      if (error) {
+        toast.error("Something went wrong");
+        return;
+      }
+
+      if (result.status === "success") {
+        toast.success(result.message);
+
+        setData([]);
+      } else {
+        toast.error(result.message);
+      }
+    });
+  };
 
   const isSorted = (id: string, desc: boolean) =>
     sorting?.[0]?.id === id && sorting?.[0]?.desc === desc;
@@ -341,14 +378,12 @@ export function DataTable({
   const filteredData = React.useMemo(() => {
     let result = data;
 
-    // Tab filter (language)
     if (activeTab !== "all") {
       result = result.filter(
         (item) => item.language.toUpperCase() === activeTab,
       );
     }
 
-    // 🔥 Search filter
     if (search.trim() !== "") {
       const q = search.toLowerCase();
 
@@ -356,8 +391,8 @@ export function DataTable({
         return (
           item.title?.toLowerCase().includes(q) ||
           item.author?.toLowerCase().includes(q) ||
-          item.publisher?.toLowerCase().includes(q) || // ✅ added
-          item.serial_number?.toString().includes(q) // ✅ safer
+          item.publisher?.toLowerCase().includes(q) ||
+          item.serial_number?.toString().includes(q)
         );
       });
     }
@@ -459,6 +494,37 @@ export function DataTable({
           <TabsTrigger value="ARABIC">Arabic</TabsTrigger>
         </TabsList>
         <div className="flex items-center gap-2">
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="destructive" size="sm">
+                <Trash2 data-icon="inline-start" />
+                Delete all
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent size="sm">
+              <AlertDialogHeader>
+                <AlertDialogMedia>
+                  <Trash2 />
+                </AlertDialogMedia>
+                <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action cannot be undone. This will permanently delete all
+                  your book records.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+
+                <AlertDialogAction
+                  onClick={handleDeleteAll}
+                  disabled={isDeletingAll}
+                >
+                  {isDeletingAll ? "Deleting..." : "Yes, delete all"}
+                </AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm">
